@@ -1,0 +1,206 @@
+/*
+ * Silhueta · temas
+ * O tema padrão é "grafite" (preto, branco e cinza). Os demais são protótipos de cor.
+ * Trocar de tema = mudar `data-theme` no <html> (veja assets/js/theme.js). Para criar um novo,
+ * copie um bloco abaixo e ajuste só as variáveis.
+ */
+
+:root,
+:root[data-theme="grafite"] {
+  color-scheme: dark;
+
+  /* superfícies */
+  --bg: #000000;
+  --bg-glow-1: rgba(255, 255, 255, .10);
+  --bg-glow-2: rgba(150, 150, 160, .07);
+  --glass: rgba(32, 32, 36, .52);
+  --glass-solid: rgba(24, 24, 27, .92);
+  --fill-1: rgba(255, 255, 255, .06);
+  --fill-2: rgba(255, 255, 255, .10);
+  --fill-3: rgba(255, 255, 255, .16);
+  --stroke: rgba(255, 255, 255, .10);
+  --stroke-2: rgba(255, 255, 255, .20);
+  --hl: rgba(255, 255, 255, .18);                 /* brilho na borda de cima do vidro */
+  --shadow: rgba(0, 0, 0, .75);
+
+  /* texto */
+  --text: #f5f5f7;
+  --text-2: rgba(245, 245, 247, .70);
+  --text-3: rgba(245, 245, 247, .44);
+
+  /* cor de destaque */
+  --accent: #f5f5f7;
+  --accent-bg: #f5f5f7;
+  --accent-ink: #0b0b0c;
+  --accent-soft: rgba(245, 245, 247, .14);
+  --accent-glow: rgba(255, 255, 255, 0);
+  --ring: rgba(255, 255, 255, .55);
+  --title-grad: linear-gradient(180deg, var(--text) 25%, var(--text-2));
+  --icon-a: #55555e;
+  --icon-b: #17171b;
+  --icon-fg: #f5f5f7;
+
+  /* estados */
+  --ok: #8fe3ac;
+  --warn: #ffd479;
+  --err: #ff8f8f;
+
+  /* fundo de transparência e decoração */
+  --checker-a: #19191c;
+  --checker-b: #232327;
+  --orb-1: rgba(255, 255, 255, .13);
+  --orb-2: rgba(170, 170, 180, .10);
+  --orb-3: rgba(120, 120, 130, .12);
+
+  /* medidas */
+  --blur: 30px;
+  --r-xl: 28px;
+  --r-lg: 22px;
+  --r-md: 14px;
+  --r-sm: 10px;
+  --topbar-h: 64px;
+}
+
+/* ------------------------------------------------------------------ claro */
+:root[data-theme="claro"] {
+  --title-grad: linear-gradient(180deg, #1d1d1f 30%, #6e6e73);
+  --icon-a: #ffffff;
+  --icon-b: #d4d4da;
+  --icon-fg: #1d1d1f;
+  color-scheme: light;
+  --bg: #e8e8ed;
+  --bg-glow-1: rgba(255, 255, 255, .95);
+  --bg-glow-2: rgba(190, 190, 205, .5);
+  --glass: rgba(255, 255, 255, .58);
+  --glass-solid: rgba(250, 250, 252, .94);
+  --fill-1: rgba(0, 0, 0, .04);
+  --fill-2: rgba(0, 0, 0, .07);
+  --fill-3: rgba(0, 0, 0, .11);
+  --stroke: rgba(0, 0, 0, .08);
+  --stroke-2: rgba(0, 0, 0, .16);
+  --hl: rgba(255, 255, 255, .9);
+  --shadow: rgba(40, 40, 60, .30);
+  --text: #1d1d1f;
+  --text-2: rgba(29, 29, 31, .70);
+  --text-3: rgba(29, 29, 31, .46);
+  --accent: #1d1d1f;
+  --accent-bg: #1d1d1f;
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(29, 29, 31, .10);
+  --ring: rgba(29, 29, 31, .5);
+  --ok: #1f9d55; --warn: #b7791f; --err: #d64545;
+  --checker-a: #d5d5db;
+  --checker-b: #ececf1;
+  --orb-1: rgba(255, 255, 255, .9);
+  --orb-2: rgba(160, 160, 190, .35);
+  --orb-3: rgba(210, 210, 225, .8);
+}
+
+/* ------------------------------------------------- protótipos coloridos */
+:root[data-theme="lima"] {
+  --title-grad: linear-gradient(105deg, #ffffff 8%, #e9ff8a 48%, #d7ff3f 100%);
+  --icon-a: #ecff8f;
+  --icon-b: #a9d900;
+  --icon-fg: #141a00;
+  --accent: #d7ff3f;
+  --accent-bg: #d7ff3f;
+  --accent-ink: #141a00;
+  --accent-soft: rgba(215, 255, 63, .16);
+  --accent-glow: rgba(215, 255, 63, .35);
+  --ring: rgba(215, 255, 63, .65);
+  --bg-glow-1: rgba(215, 255, 63, .10);
+  --bg-glow-2: rgba(120, 160, 20, .10);
+  --orb-1: rgba(215, 255, 63, .16);
+  --orb-2: rgba(150, 200, 30, .10);
+  --orb-3: rgba(255, 255, 255, .06);
+}
+
+:root[data-theme="aurora"] {
+  --title-grad: linear-gradient(105deg, #ffffff 8%, #a8b8ff 48%, #c79bff 100%);
+  --icon-a: #5b95ff;
+  --icon-b: #8a5cff;
+  --icon-fg: #ffffff;
+  --accent: #8ea2ff;
+  --accent-bg: linear-gradient(135deg, #4d8dff 0%, #9b6bff 100%);
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(130, 140, 255, .18);
+  --accent-glow: rgba(120, 120, 255, .45);
+  --ring: rgba(150, 150, 255, .7);
+  --bg-glow-1: rgba(80, 120, 255, .16);
+  --bg-glow-2: rgba(160, 90, 255, .14);
+  --orb-1: rgba(80, 130, 255, .22);
+  --orb-2: rgba(170, 100, 255, .18);
+  --orb-3: rgba(60, 200, 255, .12);
+}
+
+:root[data-theme="brasa"] {
+  --title-grad: linear-gradient(105deg, #ffffff 8%, #ffc09a 48%, #ff7a8a 100%);
+  --icon-a: #ffa05a;
+  --icon-b: #ff4f70;
+  --icon-fg: #1c0a05;
+  --accent: #ff8a5c;
+  --accent-bg: linear-gradient(135deg, #ff9a4d 0%, #ff4d6d 100%);
+  --accent-ink: #1c0a05;
+  --accent-soft: rgba(255, 120, 80, .18);
+  --accent-glow: rgba(255, 100, 70, .45);
+  --ring: rgba(255, 140, 100, .7);
+  --bg-glow-1: rgba(255, 110, 60, .15);
+  --bg-glow-2: rgba(255, 60, 110, .10);
+  --orb-1: rgba(255, 120, 60, .22);
+  --orb-2: rgba(255, 70, 110, .16);
+  --orb-3: rgba(255, 190, 90, .12);
+}
+
+:root[data-theme="oceano"] {
+  --title-grad: linear-gradient(105deg, #ffffff 8%, #9aeeff 48%, #5ab0ff 100%);
+  --icon-a: #35ead8;
+  --icon-b: #1f86ff;
+  --icon-fg: #00141c;
+  --accent: #4fdcff;
+  --accent-bg: linear-gradient(135deg, #2ee6d6 0%, #1f8bff 100%);
+  --accent-ink: #00141c;
+  --accent-soft: rgba(60, 200, 255, .17);
+  --accent-glow: rgba(40, 190, 255, .42);
+  --ring: rgba(90, 210, 255, .7);
+  --bg-glow-1: rgba(40, 190, 255, .14);
+  --bg-glow-2: rgba(30, 110, 255, .12);
+  --orb-1: rgba(40, 200, 255, .20);
+  --orb-2: rgba(30, 120, 255, .16);
+  --orb-3: rgba(60, 240, 200, .12);
+}
+
+:root[data-theme="duna"] {
+  --title-grad: linear-gradient(180deg, #2a1a14 25%, #b9532f);
+  --icon-a: #ffbd8f;
+  --icon-b: #c4623c;
+  --icon-fg: #fffaf6;
+  /* vidro quente sobre areia, inspirado em paisagem de fim de tarde */
+  color-scheme: light;
+  --bg: #f1e3d6;
+  --bg-glow-1: rgba(255, 190, 140, .75);
+  --bg-glow-2: rgba(170, 130, 200, .45);
+  --glass: rgba(255, 248, 242, .56);
+  --glass-solid: rgba(255, 249, 244, .94);
+  --fill-1: rgba(90, 40, 20, .05);
+  --fill-2: rgba(90, 40, 20, .08);
+  --fill-3: rgba(90, 40, 20, .13);
+  --stroke: rgba(90, 40, 20, .10);
+  --stroke-2: rgba(90, 40, 20, .18);
+  --hl: rgba(255, 255, 255, .85);
+  --shadow: rgba(110, 60, 30, .30);
+  --text: #2a1a14;
+  --text-2: rgba(42, 26, 20, .72);
+  --text-3: rgba(42, 26, 20, .48);
+  --accent: #b9532f;
+  --accent-bg: #c4623c;
+  --accent-ink: #fffaf6;
+  --accent-soft: rgba(196, 98, 60, .16);
+  --accent-glow: rgba(196, 98, 60, .35);
+  --ring: rgba(196, 98, 60, .6);
+  --ok: #2f8a57; --warn: #a8691c; --err: #c4413a;
+  --checker-a: #e4d3c5;
+  --checker-b: #f6ece3;
+  --orb-1: rgba(255, 170, 120, .55);
+  --orb-2: rgba(160, 120, 200, .40);
+  --orb-3: rgba(255, 220, 170, .70);
+}

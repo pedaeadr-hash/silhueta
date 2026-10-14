@@ -1,0 +1,5 @@
+# a Vercel publica só o site estático
+tests/
+scripts/
+iniciar.bat
+iniciar.sh

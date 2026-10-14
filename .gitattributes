@@ -1,0 +1,12 @@
+# Fim de linha sempre LF no repositório (evita ruído de CRLF vindo do Windows)
+* text=auto eol=lf
+
+# Scripts do Windows precisam de CRLF (esta regra vem depois para valer sobre a de cima)
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
